@@ -1,3 +1,3 @@
 # Integrations
 
-A monorepo of production-style integrations with third-party services and APIs.
+A monorepo of third-party API integrations developed for client projects and running in production.
