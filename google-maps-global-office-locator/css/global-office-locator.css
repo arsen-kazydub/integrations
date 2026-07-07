@@ -1,0 +1,89 @@
+.gol {
+  border-radius: 6px;
+  box-shadow: 0 0 1px rgba(0 0 0 / 0.5);
+  aspect-ratio: 16 / 7;
+  background: #e5e3df;
+
+  div {
+    cursor: grab;
+  }
+
+  &.gol--dragging div {
+    cursor: grabbing;
+  }
+
+  .gol__marker {
+    --marker-size            : 11px;
+    --label-padding-block    : 3px;
+    --label-padding-inline   : 6px;
+    --label-left-x-offset    : -9px;
+    --label-right-x-offset   : 6px;
+    --label-font-size        : 10px;
+    --bg-color               : 217.38 57.01% 41.96%;
+
+    @media (min-width: 576px) {
+      --marker-size          : 12px;
+      --label-padding-block  : 4px;
+      --label-padding-inline : 7px;
+      --label-left-x-offset  : -8px;
+      --label-right-x-offset : 7px;
+      --label-font-size      : 11px;
+    }
+
+    @media (min-width: 992px) {
+      --marker-size          : 14px;
+      --label-padding-block  : 5px;
+      --label-padding-inline : 8px;
+      --label-left-x-offset  : -7px;
+      --label-right-x-offset : 8px;
+      --label-font-size      : 12px;
+    }
+
+    @media (min-width: 1400px) {
+      --marker-size          : 16px;
+      --label-padding-block  : 6px;
+      --label-padding-inline : 9px;
+      --label-left-x-offset  : -6px;
+      --label-right-x-offset : 9px;
+      --label-font-size      : 13px;
+    }
+
+    position: relative;
+    width: var(--marker-size);
+    height: var(--marker-size);
+    border-radius: 100%;
+    border: 2px solid white;
+    background: hsl(var(--bg-color) / 0.85);
+
+    .gol__label {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--label-padding-block);
+      padding-block: var(--label-padding-block);
+      padding-inline: var(--label-padding-inline);
+      background: hsl(var(--bg-color) / 0.85);
+      &.gol__label--left {
+        top: 50%;
+        right: 100%;
+        transform: translate(var(--label-left-x-offset), -50%);
+      }
+      &.gol__label--right {
+        top: 50%;
+        left: 100%;
+        transform: translate(var(--label-right-x-offset), -50%);
+      }
+    }
+
+    .gol__label-link {
+      line-height: 1.25;
+      font-size: var(--label-font-size);
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
