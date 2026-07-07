@@ -1,3 +1,47 @@
+/**
+ * @typedef {Object} GlobalOfficeLocatorOptions
+ * @property {string} [apiKey='YOUR_API_KEY']
+ * - Google Maps API key
+ * @property {string} [mapId='YOUR_MAP_ID']
+ * - Google Maps Map ID
+ * @property {string} [scriptId='gol-api']
+ * - ID assigned to the injected Google Maps script
+ * @property {string} [baseUrl='https://website.com']
+ * - Base URL prepended to city links
+ * @property {Object} [mapBounds]
+ * - Map boundaries
+ * @property {number} [mapBounds.north=75]
+ * @property {number} [mapBounds.south=-40]
+ * @property {number} [mapBounds.west=-180]
+ * @property {number} [mapBounds.east=180]
+ * @property {Object} [classes]
+ * - CSS class names
+ * @property {string} [classes.dragging='gol--dragging']
+ * @property {string} [classes.marker='gol__marker']
+ * @property {string} [classes.label='gol__label']
+ * @property {string} [classes.labelLeft='gol__label--left']
+ * @property {string} [classes.labelRight='gol__label--right']
+ * @property {string} [classes.labelLink='gol__label-link']
+ * @property {Object} [countryStyle]
+ * - Styles applied to highlighted countries
+ * @property {string} [countryStyle.fillColor='hsl(212, 80%, 50%)']
+ * @property {number} [countryStyle.fillOpacity=0.4]
+ * @property {Object[]} [offices]
+ * - Array of office configuration objects (see README for details)
+ */
+
+/**
+ * Creates a new GlobalOfficeLocator instance.
+ *
+ * Displays company offices on a customized Google Map using country highlighting,
+ * custom markers, linked labels, and built-in localization.
+ *
+ * @param {HTMLElement} root
+ * - Container element for the map
+ * @param {GlobalOfficeLocatorOptions} [options]
+ * - Custom configuration options
+ */
+
 class GlobalOfficeLocator {
   constructor(root, options = {}) {
     this.root = root;
