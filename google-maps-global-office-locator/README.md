@@ -107,9 +107,7 @@ To obtain `countryId` and `position`, use the following Google Maps tools:
 * [Geocoding API](https://developers.google.com/maps/documentation/geocoding/guides-v3/overview#place-id)
 
 
-### Examples
-
-#### Single Location
+### Single Location Example
 
 ```js
 {
@@ -124,7 +122,8 @@ To obtain `countryId` and `position`, use the following Google Maps tools:
 }
 ```
 
-#### Multiple Locations
+
+### Multiple Locations Example
 
 **Note:** Each localizable property can be either a string or an object keyed by language code.
 Only the values that require translation need to be localized.
