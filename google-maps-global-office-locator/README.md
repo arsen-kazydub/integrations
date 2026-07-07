@@ -9,16 +9,14 @@ Nearby cities can be grouped into a single label.
 
 ## Screenshots
 
-#### English
+### English
 
 <kbd>
   <img src="screenshots/global-office-locator-en.webp"
        alt="World map displaying company offices with English city labels">
 </kbd>
 
-<div>&nbsp;</div>
-
-#### French
+### French
 
 <kbd>
   <img src="screenshots/global-office-locator-fr.webp"
