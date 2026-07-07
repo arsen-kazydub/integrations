@@ -1,15 +1,15 @@
 # Google Maps Global Office Locator
 
 A JavaScript component for Google Maps that displays company offices on a customized world map
-using custom markers, labels with links, and built-in localization. Nearby cities can be grouped
-into a single label.
+using country highlighting, custom markers, labels with links, and built-in localization.
+Nearby cities can be grouped into a single label.
 
 **Live Demo:** https://demo.arsen.pro/integrations/google-maps-global-office-locator/
 
 
 ## Screenshots
 
-**English**
+#### English
 
 <kbd>
   <img src="screenshots/global-office-locator-en.webp"
@@ -18,7 +18,7 @@ into a single label.
 
 <div>&nbsp;</div>
 
-**French**
+#### French
 
 <kbd>
   <img src="screenshots/global-office-locator-fr.webp"
