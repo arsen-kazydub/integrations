@@ -68,22 +68,22 @@ Then:
 | `mapId`                    | `string` | `'YOUR_MAP_ID'`         | Google Maps map ID                                                         |
 | `scriptId`                 | `string` | `'gol-api'`             | Script ID for loading Google Maps API. Must be unique                      |
 | `baseUrl`                  | `string` | `'https://website.com'` | Base URL for city links                                                    |
-| `mapBounds`                | `object` |                         | Map boundaries                                                             |
+| `mapBounds`                | `object` | `{...}`                 | Map boundaries                                                             |
 | `mapBounds.north`          | `number` | `75`                    | Northern latitude                                                          |
 | `mapBounds.south`          | `number` | `-40`                   | Southern latitude                                                          |
 | `mapBounds.west`           | `number` | `-180`                  | Western longitude                                                          |
 | `mapBounds.east`           | `number` | `180`                   | Eastern longitude                                                          |
-| `classes`                  | `object` |                         | CSS class names                                                            |
+| `classes`                  | `object` | `{...}`                 | CSS class names                                                            |
 | `classes.dragging`         | `string` | `'gol--dragging'`       | CSS class added to the map container while dragging                        |
 | `classes.marker`           | `string` | `'gol__marker'`         | CSS class for marker                                                       |
 | `classes.label`            | `string` | `'gol__label'`          | CSS class for label                                                        |
 | `classes.labelLeft`        | `string` | `'gol__label--left'`    | CSS class for left-positioned label                                        |
 | `classes.labelRight`       | `string` | `'gol__label--right'`   | CSS class for right-positioned label                                       |
 | `classes.labelLink`        | `string` | `'gol__label-link'`     | CSS class for label link                                                   |
-| `countryStyle`             | `object` |                         | Styles for highlighting office countries                                   |
+| `countryStyle`             | `object` | `{...}`                 | Styles for highlighting office countries                                   |
 | `countryStyle.fillColor`   | `string` | `'hsl(212, 80%, 50%)'`  | Country fill color                                                         |
 | `countryStyle.fillOpacity` | `number` | `0.4`                   | Country fill opacity                                                       |
-| `offices`                  | `array`  |                         | Array of office objects. See [Office Configuration](#office-configuration) |
+| `offices`                  | `array`  | `[...]`                 | Array of office objects. See [Office Configuration](#office-configuration) |
 
 
 ## Office Configuration
