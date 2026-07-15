@@ -65,7 +65,6 @@ If omitted or language is unavailable, `en` is used as a fallback.
 
 ```js
 const root = document.getElementById('office-locator');
-if (!root) return;
 
 const apiKey = 'YOUR_API_KEY';
 const mapId  = 'YOUR_MAP_ID';
