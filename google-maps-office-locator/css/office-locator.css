@@ -1,4 +1,4 @@
-.gol {
+.gmol {
   border-radius: 6px;
   box-shadow: 0 0 1px rgba(0 0 0 / 0.5);
   aspect-ratio: 16 / 7;
@@ -8,11 +8,11 @@
     cursor: grab;
   }
 
-  &.gol--dragging div {
+  &.gmol--dragging div {
     cursor: grabbing;
   }
 
-  .gol__marker {
+  .gmol__marker {
     --marker-size            : 11px;
     --label-padding-block    : 3px;
     --label-padding-inline   : 6px;
@@ -55,7 +55,7 @@
     border: 2px solid white;
     background: hsl(var(--bg-color) / 0.85);
 
-    .gol__label {
+    .gmol__label {
       position: absolute;
       display: flex;
       flex-direction: column;
@@ -63,19 +63,19 @@
       padding-block: var(--label-padding-block);
       padding-inline: var(--label-padding-inline);
       background: hsl(var(--bg-color) / 0.85);
-      &.gol__label--left {
+      &.gmol__label--left {
         top: 50%;
         right: 100%;
         transform: translate(var(--label-left-x-offset), -50%);
       }
-      &.gol__label--right {
+      &.gmol__label--right {
         top: 50%;
         left: 100%;
         transform: translate(var(--label-right-x-offset), -50%);
       }
     }
 
-    .gol__label-link {
+    .gmol__label-link {
       line-height: 1.25;
       font-size: var(--label-font-size);
       color: #fff;

@@ -1,13 +1,13 @@
 /**
- * @typedef {Object} GlobalOfficeLocatorOptions
+ * @typedef {Object} GoogleMapsOfficeLocatorOptions
  *
  * @property {string} [apiKey='YOUR_API_KEY']
  * - Google Maps API key
  *
  * @property {string} [mapId='YOUR_MAP_ID']
- * - Google Maps Map ID
+ * - Google Maps map ID
  *
- * @property {string} [scriptId='gol-api']
+ * @property {string} [scriptId='gmol-api']
  * - ID assigned to the injected Google Maps script
  *
  * @property {string} [baseUrl='https://website.com']
@@ -22,12 +22,12 @@
  *
  * @property {Object} [classes]
  * - CSS class names
- * @property {string} [classes.dragging='gol--dragging']
- * @property {string} [classes.marker='gol__marker']
- * @property {string} [classes.label='gol__label']
- * @property {string} [classes.labelLeft='gol__label--left']
- * @property {string} [classes.labelRight='gol__label--right']
- * @property {string} [classes.labelLink='gol__label-link']
+ * @property {string} [classes.dragging='gmol--dragging']
+ * @property {string} [classes.marker='gmol__marker']
+ * @property {string} [classes.label='gmol__label']
+ * @property {string} [classes.labelLeft='gmol__label--left']
+ * @property {string} [classes.labelRight='gmol__label--right']
+ * @property {string} [classes.labelLink='gmol__label-link']
  *
  * @property {Object} [countryStyle]
  * - Styles applied to highlighted countries
@@ -39,18 +39,18 @@
  */
 
 /**
- * Creates a new GlobalOfficeLocator instance.
+ * Creates a new GoogleMapsOfficeLocator instance.
  *
  * Displays company offices on a customized Google Map using country highlighting,
  * custom markers, linked labels, and built-in localization.
  *
  * @param {HTMLElement} root
  * - Container element for the map
- * @param {GlobalOfficeLocatorOptions} [options]
+ * @param {GoogleMapsOfficeLocatorOptions} [options]
  * - Custom configuration options
  */
 
-class GlobalOfficeLocator {
+class GoogleMapsOfficeLocator {
   constructor(root, options = {}) {
     this.root = root;
     if (!this.root) return;
@@ -58,7 +58,7 @@ class GlobalOfficeLocator {
     const defaults = {
       apiKey        : 'YOUR_API_KEY',
       mapId         : 'YOUR_MAP_ID',
-      scriptId      : 'gol-api',
+      scriptId      : 'gmol-api',
       baseUrl       : 'https://website.com',
       mapBounds : {
         north       : 75,
@@ -67,12 +67,12 @@ class GlobalOfficeLocator {
         east        : 180,
       },
       classes : {
-        dragging    : 'gol--dragging',
-        marker      : 'gol__marker',
-        label       : 'gol__label',
-        labelLeft   : 'gol__label--left',
-        labelRight  : 'gol__label--right',
-        labelLink   : 'gol__label-link',
+        dragging    : 'gmol--dragging',
+        marker      : 'gmol__marker',
+        label       : 'gmol__label',
+        labelLeft   : 'gmol__label--left',
+        labelRight  : 'gmol__label--right',
+        labelLink   : 'gmol__label-link',
       },
       countryStyle : {
         fillColor   : 'hsl(212, 80%, 50%)',
@@ -110,7 +110,7 @@ class GlobalOfficeLocator {
     this.lang = this.root.dataset.lang || 'en';
 
     // Google Maps invokes the callback without preserving the class context
-    this.initGol = this.initGol.bind(this);
+    this.initGmolMap = this.initGmolMap.bind(this);
 
     this.init();
   }
@@ -124,7 +124,7 @@ class GlobalOfficeLocator {
   loadGoogleMapsApi() {
     // API already loaded - initialize the locator
     if (window.google && window.google.maps) {
-      this.initGol();
+      this.initGmolMap();
       return;
     }
 
@@ -134,7 +134,7 @@ class GlobalOfficeLocator {
     }
 
     // expose callback for Google Maps
-    window.initGol = this.initGol;
+    window.initGmolMap = this.initGmolMap;
 
     const script = document.createElement('script');
     script.src =
@@ -142,7 +142,7 @@ class GlobalOfficeLocator {
       '?key=' + this.options.apiKey +
       '&map_ids=' + this.options.mapId +
       '&libraries=marker' +
-      '&callback=initGol';
+      '&callback=initGmolMap';
     script.id    = this.options.scriptId;
     script.async = true;
 
@@ -150,7 +150,7 @@ class GlobalOfficeLocator {
   }
 
 
-  initGol() {
+  initGmolMap() {
     const map = new google.maps.Map(this.root, {
       mapId: this.options.mapId,
       disableDefaultUI: true,

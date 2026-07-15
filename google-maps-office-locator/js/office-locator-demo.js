@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('global-office-locator');
+  const root = document.getElementById('office-locator');
   if (!root) return;
 
   const apiKey = 'AIzaSyDDC0873SGpv4tEm69SO8KSzttmBh1ve7o';
   const mapId  = '3ae749673c9ce03ae6dc801a';
 
-  // To add a new office location, retrieve:
+  // To add a new office, retrieve:
   // - the country Place ID
   // - the geographic coordinates
   //
@@ -75,5 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }],
   }];
 
-  new GlobalOfficeLocator(root, { apiKey, mapId, offices });
+  new GoogleMapsOfficeLocator(root, { apiKey, mapId, offices });
 });
