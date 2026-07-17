@@ -39,9 +39,9 @@ Nearby cities can be grouped into a single label.
 ## Technologies
 
 * Google Maps API
-* JavaScript (ES6+)
-* HTML5
-* CSS3
+* JavaScript
+* HTML
+* CSS
 
 
 ## How to Use
