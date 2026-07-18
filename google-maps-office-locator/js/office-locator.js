@@ -34,7 +34,7 @@
  * @property {string} [countryStyle.fillColor='hsl(212, 80%, 50%)']
  * @property {number} [countryStyle.fillOpacity=0.4]
  *
- * @property {Object[]} [offices]
+ * @property {object[]} [offices]
  * - Array of office configuration objects (see README for details)
  */
 
