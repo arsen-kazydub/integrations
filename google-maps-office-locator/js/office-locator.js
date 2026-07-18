@@ -1,5 +1,5 @@
 /**
- * @typedef {Object} GoogleMapsOfficeLocatorOptions
+ * @typedef {object} GoogleMapsOfficeLocatorOptions
  *
  * @property {string} [apiKey='YOUR_API_KEY']
  * - Google Maps API key
@@ -13,14 +13,14 @@
  * @property {string} [baseUrl='https://website.com']
  * - Base URL prepended to city links
  *
- * @property {Object} [mapBounds]
+ * @property {object} [mapBounds]
  * - Map boundaries
  * @property {number} [mapBounds.north=75]
  * @property {number} [mapBounds.south=-40]
  * @property {number} [mapBounds.west=-180]
  * @property {number} [mapBounds.east=180]
  *
- * @property {Object} [classes]
+ * @property {object} [classes]
  * - CSS class names
  * @property {string} [classes.dragging='gmol--dragging']
  * @property {string} [classes.marker='gmol__marker']
@@ -29,7 +29,7 @@
  * @property {string} [classes.labelRight='gmol__label--right']
  * @property {string} [classes.labelLink='gmol__label-link']
  *
- * @property {Object} [countryStyle]
+ * @property {object} [countryStyle]
  * - Styles applied to highlighted countries
  * @property {string} [countryStyle.fillColor='hsl(212, 80%, 50%)']
  * @property {number} [countryStyle.fillOpacity=0.4]
