@@ -8,34 +8,58 @@
  * - Google Maps map ID
  *
  * @property {string} [scriptId='gmol-api']
- * - ID assigned to the injected Google Maps script
+ * - Script ID used to load the Google Maps API. Must be unique
  *
  * @property {string} [baseUrl='https://website.com']
- * - Base URL prepended to city links
+ * - Base URL for city links
  *
  * @property {object} [mapBounds]
- * - Map boundaries
+ * - Map boundary coordinates
+ *
  * @property {number} [mapBounds.north=75]
+ * - Northern latitude
+ *
  * @property {number} [mapBounds.south=-40]
+ * - Southern latitude
+ *
  * @property {number} [mapBounds.west=-180]
+ * - Western longitude
+ *
  * @property {number} [mapBounds.east=180]
+ * - Eastern longitude
  *
  * @property {object} [classes]
- * - CSS class names
+ * - CSS class names used by the plugin
+ *
  * @property {string} [classes.dragging='gmol--dragging']
+ * - CSS class added to the map container while dragging
+ *
  * @property {string} [classes.marker='gmol__marker']
+ * - CSS class for markers
+ *
  * @property {string} [classes.label='gmol__label']
+ * - CSS class for labels
+ *
  * @property {string} [classes.labelLeft='gmol__label--left']
+ * - CSS class for left-positioned labels
+ *
  * @property {string} [classes.labelRight='gmol__label--right']
+ * - CSS class for right-positioned labels
+ *
  * @property {string} [classes.labelLink='gmol__label-link']
+ * - CSS class for label links
  *
  * @property {object} [countryStyle]
- * - Styles applied to highlighted countries
+ * - Styles used to highlight countries with offices
+ *
  * @property {string} [countryStyle.fillColor='hsl(212, 80%, 50%)']
+ * - Country fill color
+ *
  * @property {number} [countryStyle.fillOpacity=0.4]
+ * - Country fill opacity
  *
  * @property {object[]} [offices]
- * - Array of office configuration objects (see README for details)
+ * - Array of office objects (see README for details)
  */
 
 /**

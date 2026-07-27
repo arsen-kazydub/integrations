@@ -82,28 +82,28 @@ new GoogleMapsOfficeLocator(root, { apiKey, mapId, offices });
 
 ## Options
 
-| Option                     | Type     | Default                 | Description                                              |
-|----------------------------|----------|-------------------------|----------------------------------------------------------|
-| `apiKey`                   | `string` | `'YOUR_API_KEY'`        | Google Maps API key                                      |
-| `mapId`                    | `string` | `'YOUR_MAP_ID'`         | Google Maps map ID                                       |
-| `scriptId`                 | `string` | `'gmol-api'`            | Script ID for loading Google Maps API. Must be unique    |
-| `baseUrl`                  | `string` | `'https://website.com'` | Base URL for city links                                  |
-| `mapBounds`                | `object` | `{...}`                 | Map boundaries                                           |
-| `mapBounds.north`          | `number` | `75`                    | Northern latitude                                        |
-| `mapBounds.south`          | `number` | `-40`                   | Southern latitude                                        |
-| `mapBounds.west`           | `number` | `-180`                  | Western longitude                                        |
-| `mapBounds.east`           | `number` | `180`                   | Eastern longitude                                        |
-| `classes`                  | `object` | `{...}`                 | CSS class names                                          |
-| `classes.dragging`         | `string` | `'gmol--dragging'`      | CSS class added to the map container while dragging      |
-| `classes.marker`           | `string` | `'gmol__marker'`        | CSS class for marker                                     |
-| `classes.label`            | `string` | `'gmol__label'`         | CSS class for label                                      |
-| `classes.labelLeft`        | `string` | `'gmol__label--left'`   | CSS class for left-positioned label                      |
-| `classes.labelRight`       | `string` | `'gmol__label--right'`  | CSS class for right-positioned label                     |
-| `classes.labelLink`        | `string` | `'gmol__label-link'`    | CSS class for label link                                 |
-| `countryStyle`             | `object` | `{...}`                 | Styles for highlighting office countries                 |
-| `countryStyle.fillColor`   | `string` | `'hsl(212, 80%, 50%)'`  | Country fill color                                       |
-| `countryStyle.fillOpacity` | `number` | `0.4`                   | Country fill opacity                                     |
-| `offices`                  | `array`  | `[...]`                 | Array of office objects. See [Office Data](#office-data) |
+| Option                     | Type     | Default                 | Description                                                |
+|----------------------------|----------|-------------------------|------------------------------------------------------------|
+| `apiKey`                   | `string` | `'YOUR_API_KEY'`        | Google Maps API key                                        |
+| `mapId`                    | `string` | `'YOUR_MAP_ID'`         | Google Maps map ID                                         |
+| `scriptId`                 | `string` | `'gmol-api'`            | Script ID used to load the Google Maps API. Must be unique |
+| `baseUrl`                  | `string` | `'https://website.com'` | Base URL for city links                                    |
+| `mapBounds`                | `object` | `{...}`                 | Map boundary coordinates                                   |
+| `mapBounds.north`          | `number` | `75`                    | Northern latitude                                          |
+| `mapBounds.south`          | `number` | `-40`                   | Southern latitude                                          |
+| `mapBounds.west`           | `number` | `-180`                  | Western longitude                                          |
+| `mapBounds.east`           | `number` | `180`                   | Eastern longitude                                          |
+| `classes`                  | `object` | `{...}`                 | CSS class names used by the plugin                         |
+| `classes.dragging`         | `string` | `'gmol--dragging'`      | CSS class added to the map container while dragging        |
+| `classes.marker`           | `string` | `'gmol__marker'`        | CSS class for markers                                      |
+| `classes.label`            | `string` | `'gmol__label'`         | CSS class for labels                                       |
+| `classes.labelLeft`        | `string` | `'gmol__label--left'`   | CSS class for left-positioned labels                       |
+| `classes.labelRight`       | `string` | `'gmol__label--right'`  | CSS class for right-positioned labels                      |
+| `classes.labelLink`        | `string` | `'gmol__label-link'`    | CSS class for label links                                  |
+| `countryStyle`             | `object` | `{...}`                 | Styles used to highlight countries with offices            |
+| `countryStyle.fillColor`   | `string` | `'hsl(212, 80%, 50%)'`  | Country fill color                                         |
+| `countryStyle.fillOpacity` | `number` | `0.4`                   | Country fill opacity                                       |
+| `offices`                  | `array`  | `[...]`                 | Array of office objects. See [Office Data](#office-data)   |
 
 
 ## Office Data
