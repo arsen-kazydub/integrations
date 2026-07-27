@@ -48,7 +48,10 @@ Nearby cities can be grouped into a single label.
 
 ### Setup
 
-Include `office-locator.css` and `office-locator.js`.
+Include the following assets in your page:
+
+* `office-locator.css`
+* `office-locator.js`
 
 
 ### Markup
